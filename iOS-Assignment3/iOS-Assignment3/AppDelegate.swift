@@ -9,11 +9,16 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var allQuestions = [Question]();
+    
+    var a1 = Question(q: "What is 1+1?", c: "2", i1: "3", i2: "4", i3: "4")
+    var a2 = Question(q: "What is the powerhouse of the cell?", c: "mitochondria", i1: "protozoa", i2: "ribosome", i3: "all of the above")
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        allQuestions.append(a1)
+        allQuestions.append(a2)
         return true
     }
 
