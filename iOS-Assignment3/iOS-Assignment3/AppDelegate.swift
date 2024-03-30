@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        allQuestions.append(a1)
-        allQuestions.append(a2)
+        //allQuestions.append(a1)
+        //allQuestions.append(a2)
         return true
     }
 
