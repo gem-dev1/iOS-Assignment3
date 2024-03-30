@@ -62,8 +62,8 @@
         <!--Question Builder-->
         <scene sceneID="3Lh-vB-4KI">
             <objects>
-                <viewController id="8BH-6V-tOX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nau-Ak-xl1">
+                <viewController id="8BH-6V-tOX" customClass="QuestionBuilderViewController" customModule="iOS_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nau-Ak-xl1" customClass="questionBankTableViewCell" customModule="iOS_Assignment3" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -90,12 +90,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancelQuestion:" destination="8BH-6V-tOX" eventType="touchUpInside" id="s45-7x-ljX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88I-Kr-xsJ">
                                 <rect key="frame" x="309" y="121" width="61" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="onSaveQuestion:" destination="8BH-6V-tOX" eventType="touchUpInside" id="uv0-HH-0e4"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pv6-lW-R7N">
                                 <rect key="frame" x="55" y="567" width="283" height="34"/>
@@ -135,6 +141,13 @@
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </view>
                     <navigationItem key="navigationItem" title="Question Builder" id="4Mb-hv-Icx"/>
+                    <connections>
+                        <outlet property="correctInput" destination="P2k-Lv-Bgy" id="ffA-d6-fCS"/>
+                        <outlet property="incorrect1Input" destination="c77-6e-kYu" id="lTM-O1-Qs6"/>
+                        <outlet property="incorrect2Input" destination="bb5-l2-yyR" id="TNf-gG-jKc"/>
+                        <outlet property="incorrect3Input" destination="pv6-lW-R7N" id="wg8-Iq-uWj"/>
+                        <outlet property="questionInput" destination="qyk-2a-uGq" id="joN-0L-qbE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSn-3c-ttv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,6 +327,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Question Bank" id="ykT-Bj-kFP"/>
+                    <connections>
+                        <outlet property="questionTable" destination="GTu-K2-K6L" id="ohm-9X-Qiw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41M-2c-jO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

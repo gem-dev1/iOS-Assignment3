@@ -9,6 +9,9 @@ import UIKit
 
 class QuestionBankViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
+    @IBOutlet weak var questionTable: UITableView!
+    
     var questionList = (UIApplication.shared.delegate as? AppDelegate)!.allQuestions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +38,12 @@ class QuestionBankViewController: UIViewController, UITableViewDataSource, UITab
         // Do any additional setup after loading the view.
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        questionList = (UIApplication.shared.delegate as? AppDelegate)!.allQuestions
+        questionTable.reloadData()
+        
+    }
 
     /*
     // MARK: - Navigation
