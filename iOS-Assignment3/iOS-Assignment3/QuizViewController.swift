@@ -36,8 +36,9 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         if questionList.count>0 {
             reloadQuestion()
+            checkButtons()
         }
-        checkButtons()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -66,6 +67,7 @@ class QuizViewController: UIViewController {
         if currentIdx > questionList.count-2 {
             nextButton.setTitle("--", for: .normal)
             finishButton.isEnabled = true
+            
         } else {
             nextButton.setTitle(">>", for: .normal)
         }
