@@ -37,6 +37,7 @@ class QuizViewController: UIViewController {
         if questionList.count>0 {
             reloadQuestion()
         }
+        checkButtons()
 
         // Do any additional setup after loading the view.
     }
