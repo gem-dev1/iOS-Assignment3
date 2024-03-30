@@ -29,6 +29,8 @@ class QuizViewController: UIViewController {
     var questionList = (UIApplication.shared.delegate as? AppDelegate)!.allQuestions
     var currentIdx = 0
     var correctAnswer = ""
+    var optionArray = [String]()
+    var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,7 @@ class QuizViewController: UIViewController {
     
     func reloadQuestion() {
         questionLabel.text = questionList[currentIdx].question
-        var optionArray = [
+        optionArray = [
             questionList[currentIdx].correct,
             questionList[currentIdx].incorrect3,
             questionList[currentIdx].incorrect2,
@@ -78,6 +80,13 @@ class QuizViewController: UIViewController {
         if currentIdx < questionList.count-1{
             currentIdx = currentIdx + 1
             
+            let selectedAnswer = optionArray[optionSegment.selectedSegmentIndex]
+            
+            if correctAnswer == selectedAnswer {
+                score = score+1
+            }
+                
+            
             checkButtons()
             reloadQuestion()
         }
@@ -92,7 +101,25 @@ class QuizViewController: UIViewController {
         }
     }
     
+    @IBAction func onFinish(_ sender: Any) {
+        let selectedAnswer = optionArray[optionSegment.selectedSegmentIndex]
+        
+        if correctAnswer == selectedAnswer {
+            score = score+1
+        }
+        
+    }
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toResults"{
+            let res = segue.destination as? ResultViewController
+            res?.result = score
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

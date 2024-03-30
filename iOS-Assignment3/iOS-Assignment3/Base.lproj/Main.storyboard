@@ -48,7 +48,7 @@
         <!--Quiz Results-->
         <scene sceneID="uTi-3u-yO3">
             <objects>
-                <viewController id="JtU-kx-CYw" sceneMemberID="viewController">
+                <viewController id="JtU-kx-CYw" customClass="ResultViewController" customModule="iOS_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Rc-rn-ijB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +72,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quiz Results" id="o13-H3-tt6"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="UGr-vD-ekR" id="PPS-gw-Uqh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBX-Hu-wiG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,7 +242,7 @@
                                     <action selector="onPrevButton:" destination="le2-Ci-CoI" eventType="touchUpInside" id="UzN-ih-vQt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxD-31-vqM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add questions first in the Question Bank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxD-31-vqM">
                                 <rect key="frame" x="16" y="129" width="361" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -287,7 +290,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Finish Quiz"/>
                                 <connections>
-                                    <segue destination="JtU-kx-CYw" kind="show" id="PbH-w0-o9O"/>
+                                    <action selector="onFinish:" destination="le2-Ci-CoI" eventType="touchUpInside" id="MUe-gh-mSz"/>
+                                    <segue destination="JtU-kx-CYw" kind="show" identifier="toResults" id="PbH-w0-o9O"/>
                                 </connections>
                             </button>
                         </subviews>

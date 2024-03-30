@@ -12,6 +12,7 @@
 		2F24A2A42BB78AA200C65DB3 /* QuestionBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F24A2A32BB78AA200C65DB3 /* QuestionBankViewController.swift */; };
 		2F24A2A62BB7954B00C65DB3 /* QuestionBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F24A2A52BB7954B00C65DB3 /* QuestionBuilderViewController.swift */; };
 		2F24A2A82BB7A16D00C65DB3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F24A2A72BB7A16D00C65DB3 /* QuizViewController.swift */; };
+		2F24A2AA2BB7B0D100C65DB3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F24A2A92BB7B0D100C65DB3 /* ResultViewController.swift */; };
 		2F78393D2BB5160100C2D3C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78393C2BB5160100C2D3C0 /* AppDelegate.swift */; };
 		2F78393F2BB5160100C2D3C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78393E2BB5160100C2D3C0 /* SceneDelegate.swift */; };
 		2F7839412BB5160100C2D3C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7839402BB5160100C2D3C0 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		2F24A2A32BB78AA200C65DB3 /* QuestionBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankViewController.swift; sourceTree = "<group>"; };
 		2F24A2A52BB7954B00C65DB3 /* QuestionBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBuilderViewController.swift; sourceTree = "<group>"; };
 		2F24A2A72BB7A16D00C65DB3 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		2F24A2A92BB7B0D100C65DB3 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		2F7839392BB5160100C2D3C0 /* iOS-Assignment3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Assignment3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F78393C2BB5160100C2D3C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F78393E2BB5160100C2D3C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				2F24A2A32BB78AA200C65DB3 /* QuestionBankViewController.swift */,
 				2F24A2A52BB7954B00C65DB3 /* QuestionBuilderViewController.swift */,
 				2F24A2A72BB7A16D00C65DB3 /* QuizViewController.swift */,
+				2F24A2A92BB7B0D100C65DB3 /* ResultViewController.swift */,
 			);
 			path = "iOS-Assignment3";
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				2F78393D2BB5160100C2D3C0 /* AppDelegate.swift in Sources */,
 				2F24A2A42BB78AA200C65DB3 /* QuestionBankViewController.swift in Sources */,
 				2F78393F2BB5160100C2D3C0 /* SceneDelegate.swift in Sources */,
+				2F24A2AA2BB7B0D100C65DB3 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
