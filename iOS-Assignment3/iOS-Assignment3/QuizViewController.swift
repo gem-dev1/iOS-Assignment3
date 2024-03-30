@@ -23,6 +23,8 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
     
+    @IBOutlet weak var finishButton: UIButton!
+    
     
     var questionList = (UIApplication.shared.delegate as? AppDelegate)!.allQuestions
     var currentIdx = 0
@@ -53,15 +55,30 @@ class QuizViewController: UIViewController {
         optDLabel.text = optionArray[3]
         correctAnswer = questionList[currentIdx].correct
         
-        quizProgress.progress = Float(1.0 / Double(questionList.count))
+        quizProgress.progress = Float(Double(currentIdx+1) / Double(questionList.count))
         
+    }
+    
+    func checkButtons() {
+        if currentIdx > questionList.count-2 {
+            nextButton.setTitle("--", for: .normal)
+            finishButton.isEnabled = true
+        } else {
+            nextButton.setTitle(">>", for: .normal)
+        }
+        if currentIdx < 1 {
+            prevButton.setTitle("--", for: .normal)
+        } else {
+            prevButton.setTitle("<<", for: .normal)
+        }
     }
     
     
     @IBAction func onNextButton(_ sender: Any) {
-        if currentIdx < questionList.count{
+        if currentIdx < questionList.count-1{
             currentIdx = currentIdx + 1
             
+            checkButtons()
             reloadQuestion()
         }
     }
@@ -70,6 +87,7 @@ class QuizViewController: UIViewController {
         if currentIdx > 0{
             currentIdx = currentIdx - 1
             
+            checkButtons()
             reloadQuestion()
         }
     }
